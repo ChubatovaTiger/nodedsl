@@ -32,6 +32,10 @@ project {
 
     buildType(TrivialLoong)
     buildType(TrivialRegular)
+
+    params {
+        param("a", "a")
+    }
 }
 
 object TrivialLoong : BuildType({
@@ -45,7 +49,7 @@ object TrivialLoong : BuildType({
         script {
             scriptContent = """
                 echo "before sleep"
-                ping -n 9 localhost > NUL
+                ping -n 10 localhost > NUL
                 echo "after sleep"
             """.trimIndent()
         }
