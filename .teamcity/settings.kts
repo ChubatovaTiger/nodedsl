@@ -30,9 +30,19 @@ project {
 
     vcsRoot(Composite)
 
+    buildType(Fgfg)
     buildType(TrivialLoong)
     buildType(TrivialRegular)
+
+    params {
+        param("a", "a")
+        param("b", "b")
+    }
 }
+
+object Fgfg : BuildType({
+    name = "fgfg"
+})
 
 object TrivialLoong : BuildType({
     name = "trivial_loong"
@@ -44,7 +54,7 @@ object TrivialLoong : BuildType({
     steps {
         script {
             scriptContent = """
-                echo "before sleep new"
+                echo "before sleep"
                 ping -n 110 localhost > NUL
                 echo "after sleep"
             """.trimIndent()
