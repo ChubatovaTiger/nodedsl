@@ -34,7 +34,7 @@ project {
     buildType(TrivialRegular)
 
     params {
-        param("abc", "a")
+        param("abcd", "a")
     }
 }
 
