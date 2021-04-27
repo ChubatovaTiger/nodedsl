@@ -32,6 +32,10 @@ project {
 
     buildType(TrivialLoong)
     buildType(TrivialRegular)
+
+    params {
+        param("a", "a")
+    }
 }
 
 object TrivialLoong : BuildType({
