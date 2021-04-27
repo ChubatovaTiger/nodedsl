@@ -45,7 +45,7 @@ object TrivialLoong : BuildType({
         script {
             scriptContent = """
                 echo "before sleep"
-                ping -n 1 localhost > NUL
+                ping -n 11 localhost > NUL
                 echo "after sleep"
             """.trimIndent()
         }
