@@ -32,10 +32,6 @@ project {
 
     buildType(TrivialLoong)
     buildType(TrivialRegular)
-
-    params {
-        param("abcde", "a")
-    }
 }
 
 object TrivialLoong : BuildType({
@@ -61,6 +57,7 @@ object TrivialRegular : BuildType({
 
     vcs {
         root(Composite)
+        root(DslContext.settingsRoot)
     }
 
     steps {
